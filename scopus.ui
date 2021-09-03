@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1119</width>
-    <height>1121</height>
+    <height>1129</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -155,34 +155,48 @@
            </property>
            <layout class="QFormLayout" name="formLayout_3">
             <item row="0" column="0">
+             <widget class="QLabel" name="label_11">
+              <property name="text">
+               <string>Type of Search:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <widget class="QRadioButton" name="SingleSearchu">
+                <property name="text">
+                 <string>Single Search</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="MultipleJurnalsu">
+                <property name="text">
+                 <string>Multiple Jurnals</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="2" column="0">
              <widget class="QLabel" name="label_4">
               <property name="text">
                <string>Search entery: </string>
               </property>
              </widget>
             </item>
-            <item row="0" column="1">
-             <widget class="QLineEdit" name="searchenteryu">
-              <property name="text">
-               <string>Nature Reviews Molecular Cell Biology</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="0">
+            <item row="7" column="0">
              <widget class="QLabel" name="label_5">
               <property name="text">
                <string>From year:</string>
               </property>
              </widget>
             </item>
-            <item row="4" column="0">
-             <widget class="QLabel" name="label_6">
-              <property name="text">
-               <string>To year:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="1">
+            <item row="7" column="1">
              <widget class="QSpinBox" name="fromyearu">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -191,17 +205,24 @@
                </sizepolicy>
               </property>
               <property name="minimum">
-               <number>1999</number>
+               <number>0</number>
               </property>
               <property name="maximum">
-               <number>2021</number>
+               <number>9999</number>
               </property>
               <property name="value">
                <number>2017</number>
               </property>
              </widget>
             </item>
-            <item row="4" column="1">
+            <item row="8" column="0">
+             <widget class="QLabel" name="label_6">
+              <property name="text">
+               <string>To year:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="1">
              <widget class="QSpinBox" name="toyearu">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -210,15 +231,32 @@
                </sizepolicy>
               </property>
               <property name="minimum">
-               <number>1999</number>
+               <number>0</number>
               </property>
               <property name="maximum">
-               <number>2021</number>
+               <number>9999</number>
               </property>
               <property name="value">
                <number>2018</number>
               </property>
              </widget>
+            </item>
+            <item row="2" column="1">
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+               <widget class="QLineEdit" name="searchenteryu">
+                <property name="text">
+                 <string>Nature Reviews Molecular Cell Biology</string>
+                </property>
+                <property name="frame">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QgsFileWidget" name="importfileu"/>
+              </item>
+             </layout>
             </item>
            </layout>
           </widget>
@@ -271,10 +309,10 @@
                </sizepolicy>
               </property>
               <property name="minimum">
-               <number>1999</number>
+               <number>0</number>
               </property>
               <property name="maximum">
-               <number>2021</number>
+               <number>9999</number>
               </property>
               <property name="value">
                <number>2004</number>
@@ -297,10 +335,10 @@
                </sizepolicy>
               </property>
               <property name="minimum">
-               <number>1999</number>
+               <number>0</number>
               </property>
               <property name="maximum">
-               <number>2021</number>
+               <number>9999</number>
               </property>
               <property name="value">
                <number>2019</number>
@@ -474,6 +512,11 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <customwidgets>
+  <customwidget>
+   <class>QgsFileWidget</class>
+   <extends>QWidget</extends>
+   <header>qgsfilewidget.h</header>
+  </customwidget>
   <customwidget>
    <class>QgsPasswordLineEdit</class>
    <extends>QLineEdit</extends>
